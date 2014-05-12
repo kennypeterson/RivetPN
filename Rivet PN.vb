@@ -1,14 +1,14 @@
-﻿Imports Inventor
+﻿'Imports Inventor
 
 Public Class main
 
-    Private oShankDiameter As Decimal = NominalDia
+    Private oShankDiameter As Decimal '= NominalDia
     Private oMaterialThickness As Decimal 'still don't know how to obtain this info from the assembly
-    Private oRivetModelLength As Decimal = Length
+    Private oRivetModelLength As Decimal '= Length
     Private oRivetPNLength As Double
     Private oRivetSuggestedLength As Decimal
     Private oAcceptableDifference As Decimal = 0.562
-    Private oMaterialUsed As Decimal = MaterialUsed
+    Private oMaterialUsed As Decimal '= MaterialUsed
     Private oEndDashNumber As String 'create array? for dash lengths
 
 
