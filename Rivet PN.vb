@@ -3,7 +3,7 @@ Imports System.Collections.Generic
 
 Public Class dash1
     Public Function Equals1(other As dash1) As Boolean
-
+        Return True
     End Function
     Public Property FirstDash As String
         Get
@@ -31,7 +31,7 @@ End Class
 
 Public Class dash2
     Public Function Equals1(other As dash2) As Boolean
-
+        Return True
     End Function
 
     Public Property secondDash As String
