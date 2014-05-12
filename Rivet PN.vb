@@ -14,21 +14,20 @@ Public Class dash1
         End Set
     End Property
 
-    Shared Property value1 As String
+    Shared Property value1 As Decimal
         Get
             Return m_value1
         End Get
-        Set(value As String)
+        Set(value As Decimal)
             m_value1 = value
         End Set
     End Property
 
     Private Shared Property m_firstdash As String
 
-    Private Shared Property m_value1 As String
+    Private Shared Property m_value1 As Decimal
 
     Public Function Equals1(other As dash1) As Boolean
-
 
     End Function
 End Class
@@ -46,30 +45,35 @@ Public Class dash2
         End Set
     End Property
 
-    Shared Property value2 As String
+    Shared Property value2 As Decimal
         Get
             Return m_value2
         End Get
-        Set(value As String)
+        Set(value As Decimal)
             m_value2 = value
         End Set
     End Property
 
-    Private Shared Property m_firstdash As String
-
-    Private Shared Property m_value1 As String
-
-    Private Shared Property m_value2 As String
-
     Private Shared Property m_seconddash As String
 
-    Public Function Equals1(other As dash1) As Boolean
+    Private Shared Property m_value2 As Decimal
+
+    Public Function Equals1(other As dash2) As Boolean
 
 
     End Function
 End Class
 
 Public Class main
+    Public Shared Sub partlist()
+        Dim dash1 As New List(Of dash1)
+
+        dash1.Add new dash1 With
+            .dash1 = "-2"
+            .value1 = 
+
+    End Sub
+
 
     Private oShankDiameter As Decimal '= NominalDia
     Private oMaterialThickness As Decimal 'still don't know how to obtain this info from the assembly
