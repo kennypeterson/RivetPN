@@ -5,7 +5,7 @@ Public Class dash1
 
     Implements IEquatable(Of dash1)
 
-    Shared Property FirstDash As String
+    Public Property FirstDash As String
         Get
             Return m_firstdash
         End Get
@@ -14,7 +14,7 @@ Public Class dash1
         End Set
     End Property
 
-    Shared Property value1 As Decimal
+    Public Property value1 As Decimal
         Get
             Return m_value1
         End Get
@@ -23,9 +23,9 @@ Public Class dash1
         End Set
     End Property
 
-    Private Shared Property m_firstdash As String
+    Private Property m_firstdash As String
 
-    Private Shared Property m_value1 As Decimal
+    Private Property m_value1 As Decimal
 
     Public Function Equals1(other As dash1) As Boolean
 
@@ -36,7 +36,7 @@ Public Class dash2
 
     Implements IEquatable(Of dash2)
 
-    Shared Property secondDash As String
+    Public Property secondDash As String
         Get
             Return m_seconddash
         End Get
@@ -45,7 +45,7 @@ Public Class dash2
         End Set
     End Property
 
-    Shared Property value2 As Decimal
+    Public Property value2 As Decimal
         Get
             Return m_value2
         End Get
@@ -65,13 +65,65 @@ Public Class dash2
 End Class
 
 Public Class main
-    Public Shared Sub partlist()
+    Public Sub partlist()
         Dim dash1 As New List(Of dash1)
 
-        dash1.Add new dash1 With
-            .dash1 = "-2"
-            .value1 = 
+        dash1.Add(New dash1() With { _
+            .FirstDash = "2", _
+            .value1 = 0.062
+            })
 
+        dash1.Add(New dash1() With { _
+            .FirstDash = "3", _
+            .value1 = 0.094 _
+            })
+
+        dash1.Add(New dash1() With { _
+            .FirstDash = "4", _
+            .value1 = 0.125 _
+            })
+
+        dash1.Add(New dash1() With { _
+            .FirstDash = "5", _
+            .value1 = 0.156 _
+            })
+
+        dash1.Add(New dash1() With { _
+            .FirstDash = "6", _
+            .value1 = 0.187 _
+            })
+
+        dash1.Add(New dash1() With { _
+            .FirstDash = "7", _
+            .value1 = 0.219 _
+            })
+
+        dash1.Add(New dash1() With { _
+            .FirstDash = "8", _
+            .value1 = 0.25 _
+            })
+
+        dash1.Add(New dash1() With { _
+            .FirstDash = "9", _
+            .value1 = 0.312 _
+            })
+
+        dash1.Add(New dash1() With { _
+            .FirstDash = "10", _
+            .value1 = 0.375 _
+            })
+
+        Dim dash2 As New List(Of dash2)
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-2", _
+            .value2 = 0.375 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-3", _
+            .value2 = 0.375 _
+            })
     End Sub
 
 
@@ -82,9 +134,9 @@ Public Class main
     Private oRivetSuggestedLength As Decimal
     Private oAcceptableDifference As Decimal = 0.562
     Private oMaterialUsed As Decimal '= MaterialUsed
-    Private oEndDashNumber As New List(Of String)
+    Private oEndDashNumber As String
     Private oBasePN As String '= iProperties.Value("Project", "Part Number")
-    Private oFirstDashNumber As New List(Of String)
+    Private oFirstDashNumber As String
     Private oCompletePN As String
 
 
