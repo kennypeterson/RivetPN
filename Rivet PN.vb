@@ -117,12 +117,52 @@ Public Class main
 
         dash2.Add(New dash2() With { _
             .secondDash = "-2", _
-            .value2 = 0.375 _
+            .value2 = 0.125 _
             })
 
         dash2.Add(New dash2() With { _
             .secondDash = "-3", _
+            .value2 = 0.1875 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-4", _
+            .value2 = 0.25 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-5", _
+            .value2 = 0.3125 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-6", _
             .value2 = 0.375 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-7", _
+            .value2 = 0.4375 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-8", _
+            .value2 = 0.5 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-9", _
+            .value2 = 0.5625 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-10", _
+            .value2 = 0.625 _
+            })
+
+        dash2.Add(New dash2() With { _
+            .secondDash = "-12", _
+            .value2 = 0.75 _
             })
     End Sub
 
