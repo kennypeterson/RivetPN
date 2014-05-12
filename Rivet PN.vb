@@ -2,9 +2,9 @@
 Imports System.Collections.Generic
 
 Public Class dash1
+    Public Function Equals1(other As dash1) As Boolean
 
-    Implements IEquatable(Of dash1)
-
+    End Function
     Public Property FirstDash As String
         Get
             Return m_firstdash
@@ -27,14 +27,12 @@ Public Class dash1
 
     Private Property m_value1 As Decimal
 
-    Public Function Equals1(other As dash1) As Boolean
-
-    End Function
 End Class
 
 Public Class dash2
+    Public Function Equals1(other As dash2) As Boolean
 
-    Implements IEquatable(Of dash2)
+    End Function
 
     Public Property secondDash As String
         Get
@@ -58,10 +56,6 @@ Public Class dash2
 
     Private Shared Property m_value2 As Decimal
 
-    Public Function Equals1(other As dash2) As Boolean
-
-
-    End Function
 End Class
 
 Public Class main
