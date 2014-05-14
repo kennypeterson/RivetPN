@@ -1,4 +1,4 @@
-﻿'Imports Inventor
+﻿Imports Inventor
 Imports System.Collections.Generic
 
 Public Class dash1
@@ -59,6 +59,7 @@ Public Class dash2
 End Class
 
 Public Class main
+
     Public Sub partlist()
         Dim dash1 As New List(Of dash1)
 
@@ -161,15 +162,15 @@ Public Class main
     End Sub
 
 
-    Private oShankDiameter As Decimal '= NominalDia
+    Private oShankDiameter As Decimal = NominalDia
     Private oMaterialThickness As Decimal 'still don't know how to obtain this info from the assembly
-    Private oRivetModelLength As Decimal '= Length
+    Private oRivetModelLength As Decimal = Length - MaterialUsed
     Private oRivetPNLength As Double
     Private oRivetSuggestedLength As Decimal
     Private oAcceptableDifference As Decimal = 0.562
-    Private oMaterialUsed As Decimal '= MaterialUsed
+    Private oMaterialUsed As Decimal = MaterialUsed
     Private oEndDashNumber As String
-    Private oBasePN As String '= iProperties.Value("Project", "Part Number")
+    Private oBasePN As String = iProperties.Value("Project", "Part Number")
     Private oFirstDashNumber As String
     Private oCompletePN As String
 
@@ -181,6 +182,9 @@ Public Class main
 
         Dim parts As New List(Of main)
 
+        Measure.MinimumDistance('prompt)
+        inc = 0.0625 ' rounding increment
+        roundedUp = Ceil(Round('dim for part number dimension, 4) / inc) * inc
 
         'the first two if statements test the length of the rivet to make sure it won't be too long or too short
         If oRivetPNLength > oAcceptableDifference + oRivetSuggestedLength Then
